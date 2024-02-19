@@ -12,6 +12,7 @@ import 'package:oech_app001/pages/session%203/profile_page.dart';
 import 'package:oech_app001/pages/session%203/send_a_package.dart';
 import 'package:oech_app001/pages/session%203/notification_page.dart';
 import 'package:oech_app001/pages/session%203/transation_succesful.dart';
+import 'package:oech_app001/pages/session%204/traking_page.dart';
 import 'package:oech_app001/pages/session%204/wallet_page.dart';
 import 'package:oech_app001/pages/session_5/chats_page.dart';
 import 'package:oech_app001/pages/session_5/home_page.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         '/transaction_succes':(context) => const TransactionSucces(),
         // 4 session
         '/wall': (context) => const WalletPage(),
+        '/traking_page':(context) => TrakingPage(),
         // 5 session
         '/home-page': (context) => const HomePage(),
         '/chats-page': (context) => const ChatsPage(),

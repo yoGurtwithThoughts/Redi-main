@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:oech_app001/widgets/btn_widget.dart';
 
 class TransactionSucces extends StatelessWidget {
    static const routeName = '/transaction_succes';
@@ -62,7 +63,40 @@ class TransactionSucces extends StatelessWidget {
                       .bodyLarge!
                       .copyWith(color: Color.fromRGBO(5, 96, 250, 1)),
                 ),]
-              )
+              ),
+              SizedBox(height: 95),
+              ButtonWidget(
+                      buttonName: 'Track my item',
+                      buttonColor: const Color.fromRGBO(5, 96, 250, 1),
+                      onTap: () {
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                          '/traking_page',
+                          (Route<dynamic> route) => false,
+                        );
+                      },),
+                      SizedBox(height: 5.7),
+                 TextButton(
+                  
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home-page');
+                      },
+                      style: ElevatedButton.styleFrom(
+                         side: BorderSide(
+              color: Colors.blue, // Цвет бордера
+              width: 2.0,),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        backgroundColor: Colors.white,
+                      ),child: const Text(
+                        'Go back to home page',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color:Color.fromARGB(255, 5, 96, 250),
+                        ),
+                      ) ,
+                 ), 
               ],
             ),
           ],
@@ -125,8 +159,8 @@ class _AnimatedSvgState extends State<AnimatedSvg>
               Positioned.fill(
                 child: Transform.scale(
                   scale: _isExpanded
-                      ? 1 + _controller.value * 0.2
-                      : 1 - _controller.value * 0.5,
+                      ? 1 + _controller.value * 0.1
+                      : 1 - _controller.value * 0.4,
                   child: SvgPicture.asset(
                     'assets/images/check.svg',
                     fit: BoxFit.contain,
